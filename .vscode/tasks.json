@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Running a task",
+            "type": "shell",
+            "command": "echo \"Teste\"",
+            "windows": {
+                "command": "echo \"Teste\""
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -159,6 +159,7 @@ async def on_ready() -> None:
     bot.logger.info(f"discord.py API version: {discord.__version__}")
     bot.logger.info(f"Python version: {platform.python_version()}")
     bot.logger.info(f"Running on: {platform.system()} {platform.release()} ({os.name})")
+    bot.logger.info("https://discord.com/oauth2/authorize?&client_id={}&scope=bot+applications.commands&permissions={}".format(config["application_id"], config["permissions"]))
     bot.logger.info("-------------------")
     status_task.start()
     if config["sync_commands_globally"]:
@@ -171,7 +172,7 @@ async def status_task() -> None:
     """
     Setup the game status task of the bot.
     """
-    statuses = ["with you!", "with Krypton!", "with humans!"]
+    statuses = ["with you!", "with aejunior!", "with humans!"]
     await bot.change_presence(activity=discord.Game(random.choice(statuses)))
 
 

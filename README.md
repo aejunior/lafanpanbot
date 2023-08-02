@@ -98,6 +98,12 @@ Windows)
 Before running the bot you will need to install all the requirements with this command:
 
 ```
+python -m venv .venv
+
+.\.venv\Scripts\activate
+```
+
+```
 python -m pip install -r requirements.txt
 ```
 
