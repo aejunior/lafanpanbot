@@ -12,6 +12,23 @@ import aiosqlite
 
 DATABASE_PATH = f"{os.path.realpath(os.path.dirname(__file__))}/../database/database.db"
 
+def dynamic_query(elem: list[tuple]) -> tuple:
+    """
+    This function will dynamically create an output based on the parameters.
+
+    :param query: The query that should be used as base.
+    :param params: The parameters that should be used to create the query.
+    :return: The query with the parameters.
+    """
+    attrs = []
+    params = []
+    for field, value in elem: 
+        if value is not None:
+            if value is 0:
+                value = None
+            attrs.append(field)
+            params.append(value)
+    return attrs, params
 
 async def get_blacklisted_users() -> list:
     """
@@ -157,3 +174,46 @@ async def get_warnings(user_id: int, server_id: int) -> list:
             for row in result:
                 result_list.append(row)
             return result_list
+        
+from sqlite3 import Row
+
+async def get_setting(guild_id: int) -> Row:
+    query = "SELECT guild_id, news_id, projects_id FROM settings WHERE guild_id=?"
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        async with db.execute(
+            query, (guild_id,)
+        ) as cursor:
+            result = await cursor.fetchone()
+            return result
+
+
+async def add_setting(guild_id: int, news_id: int = None, projects_id: int = None) -> None:
+    attrs, params = dynamic_query([("guild_id",guild_id), ("news_id", news_id), ("projects_id", projects_id)])
+    if not attrs:
+        return
+    fields_ = ", ".join(attrs)
+    values_ = ", ".join("?" for attr in attrs)
+
+    query = f"INSERT INTO settings ({fields_}) VALUES ({values_})"
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        await db.execute(
+            query,
+            params,
+        )
+        await db.commit()
+
+async def set_setting(guild_id: int, news_id: int = None, projects_id: int = None) -> None:
+    attrs, params = dynamic_query([("news_id", news_id), ("projects_id", projects_id)])
+    params.append(guild_id)
+    
+    if not attrs:
+        return
+    
+    values = ", ".join(f"{field} = ?" for field in attrs)
+    query = f"UPDATE settings SET {values} WHERE guild_id = ?"
+    async with aiosqlite.connect(DATABASE_PATH) as db:
+        await db.execute(
+            query,
+            params,
+        )
+        await db.commit()

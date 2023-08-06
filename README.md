@@ -99,7 +99,14 @@ Before running the bot you will need to install all the requirements with this c
 
 ```
 python -m venv .venv
+```
 
+Ubuntu:
+```
+source env/bin/activate
+```
+Windows:
+```
 .\.venv\Scripts\activate
 ```
 

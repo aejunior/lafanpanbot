@@ -183,7 +183,12 @@ async def on_message(message: discord.Message) -> None:
 
     :param message: The message that was sent.
     """
+
+    answer = ["Me dá uma moeda, corno! :coin:", "Pare de me marcar, esquisito!"]
     if message.author == bot.user or message.author.bot:
+        return
+    if bot.get_user(config["application_id"]) in message.mentions:
+        await message.reply(random.choice(answer), mention_author=False)
         return
     await bot.process_commands(message)
 

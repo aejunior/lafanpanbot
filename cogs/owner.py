@@ -18,7 +18,7 @@ class Owner(commands.Cog, name="owner"):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(
+    @commands.hybrid_command(
         name="sync",
         description="Synchonizes the slash commands.",
     )
@@ -54,7 +54,7 @@ class Owner(commands.Cog, name="owner"):
         )
         await context.send(embed=embed)
 
-    @commands.command(
+    @commands.hybrid_command(
         name="unsync",
         description="Unsynchonizes the slash commands.",
     )
