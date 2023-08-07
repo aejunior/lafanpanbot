@@ -16,5 +16,6 @@ CREATE TABLE IF NOT EXISTS `settings` (
   `guild_id` INTEGER PRIMARY KEY,
   `news_id` INTEGER,
   `projects_id` INTEGER,
+  `news_role_id` INTEGER,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

@@ -178,7 +178,7 @@ async def get_warnings(user_id: int, server_id: int) -> list:
 from sqlite3 import Row
 
 async def get_setting(guild_id: int) -> Row:
-    query = "SELECT guild_id, news_id, projects_id FROM settings WHERE guild_id=?"
+    query = "SELECT guild_id, news_id, projects_id, news_role_id FROM settings WHERE guild_id=?"
     async with aiosqlite.connect(DATABASE_PATH) as db:
         async with db.execute(
             query, (guild_id,)
@@ -187,8 +187,8 @@ async def get_setting(guild_id: int) -> Row:
             return result
 
 
-async def add_setting(guild_id: int, news_id: int = None, projects_id: int = None) -> None:
-    attrs, params = dynamic_query([("guild_id",guild_id), ("news_id", news_id), ("projects_id", projects_id)])
+async def add_setting(guild_id: int, news_id: int = None, projects_id: int = None, news_role_id: int = None) -> None:
+    attrs, params = dynamic_query([("guild_id",guild_id), ("news_id", news_id), ("projects_id", projects_id), ("news_role_id", news_role_id)])
     if not attrs:
         return
     fields_ = ", ".join(attrs)
@@ -202,8 +202,8 @@ async def add_setting(guild_id: int, news_id: int = None, projects_id: int = Non
         )
         await db.commit()
 
-async def set_setting(guild_id: int, news_id: int = None, projects_id: int = None) -> None:
-    attrs, params = dynamic_query([("news_id", news_id), ("projects_id", projects_id)])
+async def set_setting(guild_id: int, news_id: int = None, projects_id: int = None, news_role_id: int = None) -> None:
+    attrs, params = dynamic_query([("news_id", news_id), ("projects_id", projects_id), ("news_role_id", news_role_id)])
     params.append(guild_id)
     
     if not attrs:
