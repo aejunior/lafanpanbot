@@ -52,6 +52,17 @@ def is_mal_id(title):
   except:
     return False
 
+
+async def role_autocomplete(
+    interaction: discord.Interaction,
+    current: str,
+) -> List[app_commands.Choice[str]]:
+    roles = interaction.guild.roles
+    return [
+        app_commands.Choice(name=role.name, value=str(role.id)) for role in roles if current.lower() in role.name.lower()
+    ]
+
+
 async def manga_autocomplete(
     interaction: discord.Interaction,
     current: str,
@@ -237,7 +248,7 @@ class Scan(commands.Cog, name="scan"):
     name="addchapter",
     description="Novo capítulo",
     )
-    @app_commands.autocomplete(title=manga_autocomplete)
+    @app_commands.autocomplete(title=manga_autocomplete, role=role_autocomplete)
     @app_commands.describe(
         title="Título",
         chapter="Número do capítulo",
@@ -246,7 +257,7 @@ class Scan(commands.Cog, name="scan"):
         mangadex="URL MangaDex",
     )
     @checks.is_owner()
-    async def new_chapter(self, context: Context, title: str, chapter: str, volume:str=None, mangalivre:str=None, mangadex: str=None):
+    async def new_chapter(self, context: Context, title: str, chapter: str, volume:str=None, role: str= None, mangalivre:str=None, mangadex: str=None):
         pings = [
             "Capítulo {number} de {title} lançado!\n{role}",
             "Capítulo {number} de {title} lançado! Vá ler...\n{role}",
@@ -278,10 +289,10 @@ class Scan(commands.Cog, name="scan"):
             await context.interaction.response.send_message("Canal para notificações não encontrado", ephemeral=True)
             return
         
-        if news_role_id is None:
-            role = ""
-        else: 
-            role = format_text(news_role_id, "role")
+        # if news_role_id is None:
+        #     role = ""
+        # else: 
+        #     role = format_text(news_role_id, "role")
     
         r_jikan = jikan.manga(int(title))
         manga = r_jikan.get("data")
@@ -293,8 +304,10 @@ class Scan(commands.Cog, name="scan"):
         embed.add_field(name="Capítulo", value=chapter)
         if volume:
             embed.add_field(name="Volume", value=volume)
-
+        if role:
+            role = f"<@&{role}>"
         btns_ = ProjectButtons(mangalivre, mangadex)
+
         await channel.send(choice(pings).format(title=manga.get("title"), number=chapter, role=role), embed=embed, view=btns_)
         await context.reply("Capítulo adicionado!", ephemeral=True)
     

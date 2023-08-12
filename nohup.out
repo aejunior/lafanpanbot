@@ -1,0 +1,836 @@
+[30m[1m2023-08-12 00:15:16[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'fun'
+[30m[1m2023-08-12 00:15:16[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'general'
+[30m[1m2023-08-12 00:15:16[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'moderation'
+[30m[1m2023-08-12 00:15:16[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'owner'
+[30m[1m2023-08-12 00:15:17[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'scan'
+[30m[1m2023-08-12 00:15:17[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Loaded extension 'template'
+[2023-08-12 00:15:17] [WARNING ] discord.ext.commands.bot: Privileged message content intent is missing, commands may not work as expected.
+[2023-08-12 00:15:17] [INFO    ] discord.client: logging in using static token
+[2023-08-12 00:15:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e7948e285acfd85aa35f13e081500d98).
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Logged in as bot1138474348425007158
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m discord.py API version: 2.3.1
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Python version: 3.11.4
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Running on: Windows 10 (nt)
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m https://discord.com/oauth2/authorize?&client_id=1138474348425007158&scope=bot+applications.commands&permissions=8
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m -------------------
+[30m[1m2023-08-12 00:15:20[0m [34m[1mINFO    [0m [32m[1mdiscord_bot[0m Syncing commands globally...
+[2023-08-12 00:16:34] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    if btns.value == "publish":
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 00:19:19] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 264, in new_chapter
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\webhook\async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+[2023-08-12 00:19:28] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    message = await context.send(view=btns)
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 00:23:16] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=212, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=212, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=212, endpoint=manga
+[2023-08-12 00:24:22] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 404 - status=404, type=BadResponseException, message=Resource does not exist, error=404 on https://myanimelist.net/manga/212122/ for id=212122, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 404 - status=404, type=BadResponseException, message=Resource does not exist, error=404 on https://myanimelist.net/manga/212122/ for id=212122, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 404 - status=404, type=BadResponseException, message=Resource does not exist, error=404 on https://myanimelist.net/manga/212122/ for id=212122, endpoint=manga
+[2023-08-12 00:24:38] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=2121, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=2121, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=2121, endpoint=manga
+[2023-08-12 00:26:06] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=21212, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=21212, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=21212, endpoint=manga
+[2023-08-12 00:26:42] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=312, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=312, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=312, endpoint=manga
+[2023-08-12 00:29:01] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 00:30:01] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 00:31:20] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    message = await context.send(view=buttons)
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 00:32:59] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 00:34:13] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 00:36:08] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+    role = format_text(news_role_id, "role")
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 00:36:44] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    message = await context.send(view=buttons)
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 00:37:20] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 299, in new_chapter
+    buttons = RoleChapterView(chapter_role_callback)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\context.py", line 1060, in send
+    await self.interaction.response.send_message(**kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\interactions.py", line 801, in send_message
+    await adapter.create_interaction_response(
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\webhook\async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+[2023-08-12 00:38:25] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    message = await context.send(view=buttons)
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 00:58:53] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    manga = r_jikan.get("data")
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 01:04:48] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 286, in new_chapter
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 166, in manga
+    return self._get("manga", id, extension, page)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 98, in _get
+    return self._request(url, id=id, endpoint=endpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 85, in _request
+    return self._wrap_response(response, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\jikanpy\jikan.py", line 79, in _wrap_response
+    raise APIException(response.status_code, json_response, **kwargs)
+jikanpy.exceptions.APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: APIException: HTTP 429 - status=429, type=RateLimitException, message=You are being rate-limited. Please follow Rate Limiting guidelines: https://docs.api.jikan.moe/#section/Information/Rate-Limiting, error=None for id=1231, endpoint=manga
+[2023-08-12 01:05:14] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    manga = r_jikan.get("data")
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+[2023-08-12 01:06:13] [ERROR   ] discord.client: Ignoring exception in on_command_error
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\cogs\scan.py", line 301, in new_chapter
+    manga = r_jikan.get("data")
+       ^^^^^^^^^^
+AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\bot.py", line 291, in on_command_error
+    raise error
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\ext\commands\hybrid.py", line 438, in _invoke_with_namespace
+    value = await self._do_call(ctx, ctx.kwargs)  # type: ignore
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junior\Documents\Projetos\lafanpanbot\.venv\Lib\site-packages\discord\app_commands\commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.ext.commands.errors.HybridCommandError: Hybrid command raised an error: Command 'addchapter' raised an exception: AttributeError: 'RoleChapterView' object has no attribute 'value'
