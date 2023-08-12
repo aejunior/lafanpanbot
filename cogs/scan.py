@@ -253,6 +253,7 @@ class Scan(commands.Cog, name="scan"):
         title="Título",
         chapter="Número do capítulo",
         volume="Número do volume",
+        role="Cargo para notificar",
         mangalivre="URL MangaLivre",
         mangadex="URL MangaDex",
     )
